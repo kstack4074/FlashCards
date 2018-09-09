@@ -5,3 +5,4 @@ build
 .eggs
 dist
 helloworld.egg-info
+*__pycache__
