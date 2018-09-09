@@ -1,0 +1,7 @@
+*.pem
+build
+.idea
+.venv
+.eggs
+dist
+helloworld.egg-info
