@@ -9,3 +9,6 @@ class DynamoTable:
 
     def getEverything(self):
         return self.table.scan()
+
+    def getItems(self):
+        return self.table.scan()["Items"]

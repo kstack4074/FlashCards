@@ -2,6 +2,7 @@
 import json
 from flask import Flask, Response
 
+from CardTable.cardtable import CardTable
 from Dynamo.dynamo import DynamoTable
 from helloworld.flaskrun import flaskrun
 
@@ -17,8 +18,8 @@ def post():
 
 @application.route('/<topic>', methods=['GET'])
 def getCardWithTopic(topic):
-    flashCardTable = DynamoTable('Cards')
-    return Response(json.dumps({'Topic': flashCardTable.getEverything()}), mimetype='application/json', status=200)
+    flashCardTable = CardTable()
+    return Response(json.dumps({'Topic': flashCardTable.getCard("foo")}), mimetype='application/json', status=200)
 
 
 if __name__ == '__main__':
